@@ -181,3 +181,5 @@ Don’t forget to run npm install from the terminal of your project folder to in
 | 10     | For...of Loops               | Rewrite to use ES6’s `for...of` operator instead of `var`.                           | `10-loops.js`                    |
 | 11     | Iterator                       | Create a function that returns an object with department names and employees.        | `11-createEmployeesObject.js`    |
 | 12     | Let's create a report object   | Write a function to create a report object with employee counts by department.       | `12-createReportObject.js`       |
+
+Baptiste Pouquerou
