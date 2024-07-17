@@ -12,13 +12,11 @@ export default class HolbertonClass {
     return this._location;
   }
 
-  cast(type) {
-    if (type === 'number') {
-      return this._size;
-    }
-    if (type === 'string') {
-      return this._location;
-    }
-    throw new TypeError('Invalid type for casting');
+  valueOf() {
+    return this._size;
+  }
+
+  toString() {
+    return this._location;
   }
 }
