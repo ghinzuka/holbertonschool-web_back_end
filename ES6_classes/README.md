@@ -1,5 +1,7 @@
-# Project Badge
-**ES6 Classes**  
+# ES6 Classes
+
+![817248fb77fb5c2cef3f](https://github.com/user-attachments/assets/b785c2ba-bd58-479b-af65-1b6e8a6fb60f)
+
 **Amateur**  
 **By:** Johann Kerbrat, Engineering Manager at Uber Works  
 **Weight:** 1  
