@@ -162,3 +162,6 @@ Don’t forget to run `$ npm install` when you have the `package.json`
 | 8      | Primitive - Holberton Class    | Implement a `HolbertonClass` with attributes `size` and `location`, and custom type casting to `Number` and `String` | `8-hbtn_class.js`       |
 | 9      | Hoisting                       | Fix the provided code to make it work correctly with the `HolbertonClass` and `StudentHolberton` classes   | `9-hoisting.js`         |
 | 10     | Vroom                          | Implement a `Car` class with attributes `brand`, `motor`, and `color`, and a method `cloneCar`              | `10-car.js`             |
+
+
+Baptiste POUQUEROU
