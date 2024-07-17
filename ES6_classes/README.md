@@ -144,3 +144,21 @@ module.exports = {
 ```
 ## and…
 Don’t forget to run `$ npm install` when you have the `package.json`
+
+---
+
+# Tasks
+
+| Number | Name                           | Short Description                                                                                         | File Name               |
+|--------|--------------------------------|-----------------------------------------------------------------------------------------------------------|-------------------------|
+| 0      | You used to attend a place like this at some point | Implement a `ClassRoom` class with an attribute `maxStudentsSize`                                           | `0-classroom.js`        |
+| 1      | Let's make some classrooms     | Implement a function `initializeRooms` that returns an array of 3 `ClassRoom` objects                       | `1-make_classrooms.js`  |
+| 2      | A Course, Getters, and Setters | Implement a `HolbertonCourse` class with attributes `name`, `length`, and `students`, and their getters/setters | `2-hbtn_course.js`      |
+| 3      | Methods, static methods, computed methods names..... MONEY | Implement a `Currency` class with attributes `code` and `name`, and a method `displayFullCurrency`         | `3-currency.js`         |
+| 4      | Pricing                        | Implement a `Pricing` class with attributes `amount` and `currency`, a method `displayFullPrice`, and a static method `convertPrice` | `4-pricing.js`          |
+| 5      | A Building                     | Implement an abstract `Building` class with an attribute `sqft`, and a method `evacuationWarningMessage`    | `5-building.js`         |
+| 6      | Inheritance                    | Implement a `SkyHighBuilding` class extending `Building` with attributes `sqft` and `floors`, and an overridden method `evacuationWarningMessage` | `6-sky_high.js`         |
+| 7      | Airport                        | Implement an `Airport` class with attributes `name` and `code`, and a default string description returning the airport code | `7-airport.js`          |
+| 8      | Primitive - Holberton Class    | Implement a `HolbertonClass` with attributes `size` and `location`, and custom type casting to `Number` and `String` | `8-hbtn_class.js`       |
+| 9      | Hoisting                       | Fix the provided code to make it work correctly with the `HolbertonClass` and `StudentHolberton` classes   | `9-hoisting.js`         |
+| 10     | Vroom                          | Implement a `Car` class with attributes `brand`, `motor`, and `color`, and a method `cloneCar`              | `10-car.js`             |
