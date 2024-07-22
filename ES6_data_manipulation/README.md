@@ -1,4 +1,5 @@
 # ES6 Data Manipulation
+![6ab7bec4727cb5c91257](https://github.com/user-attachments/assets/7f2fa239-dbf2-4ce4-85b2-33179711ae8f)
 
 **Level**: Amateur  
 **By**: Johann Kerbrat, Engineering Manager at Uber Works  
@@ -157,3 +158,5 @@ Don’t forget to run `$ npm install` when you have the `package.json`
 | 8      | Clean set                  | Create a function `cleanSet` that returns a string of all the set values that start with a specific string. | `8-clean_set.js`                |
 | 9      | Map data structure         | Create a function `groceriesList` that returns a map of groceries with specified items and quantities. | `9-groceries_list.js`           |
 | 10     | More map data structure    | Create a function `updateUniqueItems` that returns an updated map for all items with initial quantity at 1. | `10-update_uniq_items.js`       |
+
+baptiste pouquerou
