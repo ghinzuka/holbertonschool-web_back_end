@@ -217,3 +217,4 @@ Don’t forget to run `$ npm install` when you have the `package.json`
 | 9      | Throw error / try catch     | Handle errors from a function and append results to an array with a final processing message.         | `9-try.js`                     |
 | 10     | Await / Async               | Use async/await to handle promises from `uploadPhoto` and `createUser`, returning their responses.   | `100-await.js`                 |
 
+Baptiste pouquerou
