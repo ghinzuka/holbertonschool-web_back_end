@@ -1,4 +1,5 @@
 # Project Badge
+![75862d67ca51a042003c](https://github.com/user-attachments/assets/b6a4fa7a-4022-486d-8f5f-45f7e5a89343)
 
 ## ES6 Promises
 
@@ -67,14 +68,14 @@ npm -v
 npm install --save-dev jest
 
 # Install Babel
-npm install --save-dev babel-jest @babel/core @babel/preset-env
+npm install --save-dev babel-jest @babel/core @babel/preset-env @babel/cli
 
 # Install ESLint
 npm install --save-dev eslint
 ```
-### Configuration Files
+## Configuration Files
 
-## `package.json`
+### `package.json`
 
 ```bash
 
@@ -99,7 +100,7 @@ npm install --save-dev eslint
 }
 ```
 
-## `babel.config.js`
+### `babel.config.js`
 
 ```bash
 module.exports = {
@@ -116,9 +117,31 @@ module.exports = {
 };
 ```
 
-## `eslintrc.js`
+### `utils.js`
 
 ```bash
+
+export function uploadPhoto() {
+  return Promise.resolve({
+    status: 200,
+    body: 'photo-profile-1',
+  });
+}
+
+
+export function createUser() {
+  return Promise.resolve({
+    firstName: 'Guillaume',
+    lastName: 'Salva',
+  });
+}
+
+```
+
+### `eslintrc.js`
+
+```bash
+
 module.exports = {
   env: {
     browser: false,
@@ -139,8 +162,6 @@ module.exports = {
   },
   plugins: ['jest'],
   rules: {
-    'max-classes-per-file': 'off',
-    'no-underscore-dangle': 'off',
     'no-console': 'off',
     'no-shadow': 'off',
     'no-restricted-syntax': [
@@ -157,8 +178,26 @@ module.exports = {
   ]
 };
 ```
-## and…
+### and…
 Don’t forget to run `$ npm install` when you have the `package.json`
+
+## Response Data Format
+
+`uploadPhoto` returns a response with the format
+```
+{
+  status: 200,
+  body: 'photo-profile-1',
+}
+```
+`createUser` returns a response with the format
+
+```
+{
+  firstName: 'Guillaume',
+  lastName: 'Salva',
+}
+```
 
 ---
 
