@@ -1,6 +1,7 @@
 # Project Badge
 
 ## Python - Variable Annotations
+![image](https://github.com/user-attachments/assets/0ae575c4-eac8-40e4-b07f-a4fb9dd7c3f6)
 
 **Master**
 
