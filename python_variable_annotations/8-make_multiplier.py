@@ -8,5 +8,5 @@ def make_multiplier(multiplier: float) -> Callable[[float], float]:
     """returns a function multiplying a float by multiplier"""
     def multiplies(value: float) -> float:
         """returns a float multiplied by multiplier"""
-        return(value * multiplier)
+        return value * multiplier
     return multiplies
