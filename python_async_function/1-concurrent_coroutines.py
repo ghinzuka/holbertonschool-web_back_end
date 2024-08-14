@@ -8,16 +8,19 @@ wait_n should return the list of all the delays (float values).
 The list of the delays should be in ascending order without
 using sort() because of concurrency."""
 import asyncio
+import typing
 from bisect import insort
-from basic_async_syntax import wait_random
-from typing import List
+wait_random = __import__('0-basic_async_syntax').wait_random
 
 
-async def wait_n(n: int, max_delay: int) -> List[float]:
-    """wait for a coroutine"""
-    coroutines = [wait_random(max_delay) for _ in range(n)]
+async def wait_n(n: int, max_delay: int) -> typing.List[float]:
+    """Executes multiple coroutines at the same time
+    and returns a list of execution times in ascending order"""
+    tasks = [asyncio.create_task(wait_random(max_delay)) for _ in range(n)]
+
     delays = []
-    for coroutine in asyncio.as_completed(coroutines):
-        delay = await coroutine
+    for task in asyncio.as_completed(tasks):
+        delay = await task
         insort(delays, delay)
+
     return delays
