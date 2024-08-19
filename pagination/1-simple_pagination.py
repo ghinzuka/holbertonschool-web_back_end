@@ -36,12 +36,12 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
-        """Return page of the dataset
-        """
-        assert type(page) is int and page > 0
-        assert type(page_size) is int and page_size > 0
-        page, page_size = index_range(page, page_size)
-        try:
-            return self.dataset()[page:page_size]
-        except IndexError:
+        """return the appropriate page of the dataset
+        (i.e. the correct list of rows)"""
+        assert type(page) is int and type(page_size) is int
+        assert page > 0 and page_size > 0
+        start_index, end_index = index_range(page, page_size)
+        dataset = self.dataset()
+        if len(dataset) <= start_index or len(dataset) <= end_index:
             return []
+        return dataset[start_index:end_index]
