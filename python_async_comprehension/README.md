@@ -1,5 +1,8 @@
 # Python - Async Comprehension
 
+![image](https://github.com/user-attachments/assets/f6824591-f422-4a54-9f40-909809420c9c)
+
+
 ## Master
 
 **By:** Emmanuel Turlay, Staff Software Engineer at Cruise  
