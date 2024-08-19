@@ -44,3 +44,12 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 
 **Popular_Baby_Names.csv**  
 Use this data file for your project. https://intranet.hbtn.io/rltoken/7IKLZ7i4pO4MJ9CQoGHfVw
+
+## Tasks  
+
+| Number | Name                              | Short Description                                               | Filename                    |
+|--------|-----------------------------------|-----------------------------------------------------------------|-----------------------------|
+| 0      | Simple Helper Function            | Write a function `index_range` to calculate start and end indexes | `0-simple_helper_function.py` |
+| 1      | Simple Pagination                 | Implement `Server` class and `get_page` method for pagination      | `1-simple_pagination.py`      |
+| 2      | Hypermedia Pagination             | Extend `Server` class with `get_hyper` to include hypermedia pagination | `2-hypermedia_pagination.py`  |
+| 3      | Deletion-Resilient Hypermedia Pagination | Implement `get_hyper_index` to handle deleted rows and pagination | `3-hypermedia_del_pagination.py` |
