@@ -1,0 +1,2 @@
+//insert in a colelction shcool the document with attributes names and value holberton
+db.school.insertOne({ name: "Holberton school" })
