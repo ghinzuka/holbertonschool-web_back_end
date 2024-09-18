@@ -1,6 +1,6 @@
 // write a function that display a message in stdout
 function displayMessage(mess) {
-	process.stdout.write(mess + '\n');
+	console.log(mess);
 }
 
 module.exports=displayMessage;
