@@ -30,11 +30,11 @@ async function countStudents(path) {
       }
       studentFields[field].push(firstname);
     });
-    console.log(`Number of students: ${lines.lenght}`);
+    console.log(`Number of students: ${lines.length}`);
     for (const field in studentFields) {
       if (field) {
         const list = studentFields[field].join(', ');
-        console.log(`Number of students in ${field}: ${studentFields[field].lenght}. List: ${list}`);
+        console.log(`Number of students in ${field}: ${studentFields[field].length}. List: ${list}`);
       }
     }
   } catch (err) {
