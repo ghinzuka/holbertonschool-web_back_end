@@ -27,37 +27,39 @@ const readDatabase = require('../utils');
 
 class StudentsController {
   static async getAllStudents(req, res) {
+    const dbFile = req.app.get('dbFile');
     try {
-      const students = await readDatabase('database.csv');
-      let response = 'This is the list of our students\n';
-      const fields = Object
-        .keys(students).sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+      const students = await readDatabase(dbFile);
+      res.status(200).write('This is the list of our students\n');
+      const sortedFields = Object
+        .keys(students)
+        .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 
-      fields.forEach((field) => {
+      for (const field of sortedFields) {
         const list = students[field].join(', ');
-        response += `Number of students in ${field}: ${students[field].length}. List: ${list}\n`;
-      });
-
-      res.status(200).send(response.trim());
+        res.write(`Number of students in ${field}: ${students[field].length}. List: ${list}\n`);
+      }
+      res.end();
+      return;
     } catch (error) {
       res.status(500).send('Cannot load the database');
     }
   }
 
   static async getAllStudentsByMajor(req, res) {
-    const { major } = req.query;
+    const { major } = req.params;
+    const dbFile = req.app.get('dbFile');
 
-    if (major !== 'CS' && major !== 'SWE') {
+    if (!['CS', 'SWE'].includes(major)) {
       return res.status(500).send('Major parameter must be CS or SWE');
     }
 
     try {
-      const students = await readDatabase('database.csv');
+      const students = await readDatabase(dbFile);
       const list = students[major] ? students[major].join(', ') : '';
-
-      res.status(200).send(`List: ${list}`);
+      return res.status(200).send(`List: ${list}`);
     } catch (error) {
-      res.status(500).send('Cannot load the database');
+      return res.status(500).send('Cannot load the database');
     }
   }
 }
