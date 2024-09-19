@@ -10,8 +10,9 @@
 // CSV file can contain empty lines (at the end) - and they are not a valid student!
 
 const http = require('http');
-const path = require('path');
 const countStudents = require('./3-read_file_async');
+
+const dbfile = process.argv[2];
 
 const app = http.createServer(async (req, res) => {
   if (req.url === '/') {
@@ -21,9 +22,17 @@ const app = http.createServer(async (req, res) => {
     res.writeHead(200, { 'content-type': 'text/plain' });
     res.write('This is the list of our students\n');
     try {
-      const dbfile = process.argv[2];
-      const data = path.resolve(dbfile);
-      await countStudents(data);
+      const originalLog = console.log;
+      console.log = () => {};
+      let logs = '';
+
+      console.log = (msg) => {
+        logs += `${msg}\n`;
+      };
+
+      await countStudents(dbfile);
+      console.log = originalLog;
+      res.write(logs);
     } catch (error) {
       res.write(error.message);
     } finally {
