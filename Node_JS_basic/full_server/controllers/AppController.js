@@ -3,9 +3,9 @@
 // It returns a 200 status and the message Hello Holberton School!
 
 class AppController {
-  static getHomepage(req, res) {
-    res.status(200);
-    res.send('Hello Holberton School!');
+  static getHomepage(request, response) {
+    response.status(200);
+    response.send('Hello Holberton School!');
   }
 }
-module.exports = AppController;
+export default AppController;

@@ -1,16 +1,13 @@
-const express = require('express');
-const routes = require('./routes/index');
+import express from 'express';
+import controllerRouting from './routes/index';
 
 const app = express();
 const PORT = 1245;
-const dbFile = process.argv[2];
 
-app.set('dbFile', dbFile);
-
-app.use('/', routes);
+controllerRouting(app);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
-module.export = app;
+export default app;
